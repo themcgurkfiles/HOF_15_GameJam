@@ -18,6 +18,7 @@ ADarkCloudActor::ADarkCloudActor()
 void ADarkCloudActor::BeginPlay()
 {
 	Super::BeginPlay();
+
 	
 }
 
@@ -25,16 +26,8 @@ void ADarkCloudActor::BeginPlay()
 void ADarkCloudActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-}
-
-void ADarkCloudActor::FollowPlayer(float deltaTime)
-{
-	ACharacter* playerCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
-	newPosition = FMath::VInterpTo(GetActorLocation(), playerPosition, GetWorld()->GetDeltaSeconds(), cloudSpeed * deltaTime);
-	SetActorLocation(newPosition);
-	
-	
-
+	/*ACharacter* playerCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+	newPosition = FMath::VInterpTo(GetActorLocation(), playerPosition, GetWorld()->GetDeltaSeconds(), cloudSpeed * DeltaTime);
+	SetActorLocation(newPosition);*/
 }
 

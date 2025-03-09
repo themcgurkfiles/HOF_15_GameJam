@@ -18,8 +18,7 @@ public:
 	ADarkCloudActor();
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	UFUNCTION(BlueprintNativeEvent, Category = "DarkCloudSystem")
-	void FollowPlayer(float deltaTime);
+	
 
 protected:
 	// Called when the game starts or when spawned
@@ -27,11 +26,11 @@ protected:
 
 private:
 
-	FVector playerPosition = GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation();
+	/*FVector playerPosition = GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation();
 	FVector DirectionVector = (playerPosition - GetActorLocation()).GetSafeNormal();
 	FVector newPosition; 
 	
-	float cloudSpeed;
+	float cloudSpeed = 1.f;*/
 	
 
 };
