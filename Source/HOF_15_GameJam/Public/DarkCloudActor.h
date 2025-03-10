@@ -8,6 +8,7 @@
 
 
 
+
 UCLASS()
 class HOF_15_GAMEJAM_API ADarkCloudActor : public AActor
 {
@@ -18,9 +19,6 @@ public:
 	ADarkCloudActor();
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Following")
-	ACharacter* playerCharacter;
 	
 
 protected:
@@ -29,5 +27,5 @@ protected:
 
 private:
 	float cloudSpeed;
-
+	ACharacter* playerCharacter;
 };

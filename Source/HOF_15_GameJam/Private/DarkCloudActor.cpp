@@ -6,6 +6,9 @@
 #include "GameFramework/Character.h"
 #include "GameFramework/Pawn.h"
 #include "DrawDebugHelpers.h"
+#include "NiagaraSystem.h"
+#include "NiagaraFunctionLibrary.h"
+
 
 // Sets default values
 ADarkCloudActor::ADarkCloudActor()
@@ -22,6 +25,8 @@ void ADarkCloudActor::BeginPlay()
 	cloudSpeed = 100.f;
 
 	playerCharacter = Cast<ACharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+
+	
 }
 
 // Called every frame
