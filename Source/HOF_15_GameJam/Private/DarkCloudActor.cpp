@@ -22,10 +22,9 @@ ADarkCloudActor::ADarkCloudActor()
 void ADarkCloudActor::BeginPlay()
 {
 	Super::BeginPlay();
-	cloudSpeed = 100.f;
+	cloudSpeed = 250.f;
 
 	playerCharacter = Cast<ACharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
-
 	
 }
 
@@ -44,6 +43,9 @@ void ADarkCloudActor::Tick(float DeltaTime)
 		Direction.Normalize();
 		FVector NewLocation = GetActorLocation() + (Direction * cloudSpeed * DeltaTime);
 		SetActorLocation(NewLocation);
+
+		FRotator newRotation = Direction.Rotation();
+		SetActorRotation(newRotation);
 	}
 }
 

@@ -26,6 +26,7 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+	
 	float cloudSpeed;
 	ACharacter* playerCharacter;
 };
