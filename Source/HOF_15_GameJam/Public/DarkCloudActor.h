@@ -18,6 +18,9 @@ public:
 	ADarkCloudActor();
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Following")
+	ACharacter* playerCharacter;
 	
 
 protected:
@@ -25,12 +28,6 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
-
-	/*FVector playerPosition = GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation();
-	FVector DirectionVector = (playerPosition - GetActorLocation()).GetSafeNormal();
-	FVector newPosition; 
-	
-	float cloudSpeed = 1.f;*/
-	
+	float cloudSpeed;
 
 };
