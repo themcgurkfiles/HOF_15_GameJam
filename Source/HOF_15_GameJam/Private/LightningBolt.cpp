@@ -42,6 +42,10 @@ void ALightningBolt::Tick(float DeltaTime)
 
 void ALightningBolt::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
+    // Check if other actor is cloud platform class
+
+
+    
     if (OtherActor && OtherActor != this)
     {
         // Example damage
