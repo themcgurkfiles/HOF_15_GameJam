@@ -24,9 +24,13 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	void ActivateEmitter();
+
 
 private:
 	
 	float cloudSpeed;
-	ACharacter* playerCharacter;
+	UPROPERTY()
+	class UNiagaraComponent* niagaraComponent;
+	ACharacter* player;
 };
